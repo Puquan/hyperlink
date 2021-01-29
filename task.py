@@ -20,7 +20,7 @@ def main():
         print('上传文件已完成')
     elif prompt==3:
         notebook = search_notebook()
-        print(notebook)
+        #print(notebook)
         # 如果文件夹中只有一个notebook，自动生成该notebook链接
         if len(notebook)==1:
             link = generate_link(notebook[0])
@@ -36,7 +36,7 @@ def main():
             print('notebook链接为：')
             print(link)
         else:
-            print('无法识别指令，关闭程序。')
+            print('未能检测到notebook文件，关闭程序。')
     elif prompt==4:
         git_repo_link = input('请输入该git仓库网址：')
         notebook_path = input('请输入notebook在该仓库的相对地址：')
