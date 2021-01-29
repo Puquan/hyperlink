@@ -35,7 +35,7 @@ def main():
             link = generate_link1(notebook[user_choice-1])
             print('notebook链接为：')
             print(link)
-        else:
+        elif len(notebook)==0:
             print('未能检测到notebook文件，关闭程序。')
     elif prompt==4:
         git_repo_link = input('请输入该git仓库网址：')
