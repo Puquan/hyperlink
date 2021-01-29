@@ -14,7 +14,7 @@ def main():
     if prompt==1:
         init()
     elif prompt==2:
-        pass
+        upload()
     elif prompt==3:
         pass
     else:
