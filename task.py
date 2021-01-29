@@ -35,6 +35,9 @@ def main():
             link = generate_link1(notebook[user_choice-1])
             print('notebook链接为：')
             print(link)
+            # 如果pyperclip出错可以直接注释下两行
+            print('已将链接复制到剪切板')
+            copy(link)
         elif len(notebook)==0:
             print('未能检测到notebook文件，关闭程序。')
     elif prompt==4:
@@ -42,6 +45,9 @@ def main():
         notebook_path = input('请输入notebook在该仓库的相对地址：')
         link = generate_link2(git_repo_link,notebook_path)
         print(link)
+        # 如果pyperclip出错可以直接注释下两行
+        print('已将链接复制到剪切板')
+        copy(link)
     else:
         print('无法识别指令，关闭程序。')
 main()
